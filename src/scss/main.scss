@@ -55,8 +55,10 @@ main{
   background-color: white;
 }
 .post-types__icon{
+  display: block;
   margin-bottom: 5px;
-  margin-left: 3px;//corregir para centrar auto
+  margin-left: auto;
+  margin-right: auto;
 }
 .post__top{
   background-color: white;
