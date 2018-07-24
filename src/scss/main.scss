@@ -1,5 +1,5 @@
-@import "../../node_modules/bootstrap/scss/bootstrap";
-//@import "vendor/bootstrap-custom";
+@import "vendor/_bootstrap-custom";
+
 $dark-0: #36465d;
 $dark-1: #2d3a4e;
 $dark-blue: #529ecc;
@@ -15,6 +15,10 @@ main{
 .navbar{
   height: 70px;
   padding: 0;
+  background-color: $dark-0;
+}
+.navbar-collapse{
+  z-index: 1;
   background-color: $dark-0;
 }
 .navbar-brand{

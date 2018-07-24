@@ -16,7 +16,7 @@ let path = require('path')
 gulp.task('styles', () => {
     return gulp.src('src/scss/main.scss')
         .pipe(sass({includePaths: [
-                path.join(__dirname, 'node_modules/bootstrap-sass/assets/stylesheets'),
+                path.join(__dirname, 'node_modules/bootstrap/scss/'),
                 path.join(__dirname, 'src/scss')]
             , outputStyle: 'compressed'}))
         .pipe(gulp.dest('dist/css/'))
@@ -30,6 +30,11 @@ gulp.task('html', () => {
 gulp.task('assets', () => {
     return gulp.src('src/**/*.png')
         .pipe(gulp.dest('dist/assets/'))
+})
+
+gulp.task('js', () => {
+    return gulp.src('node_modules/bootstrap/dist/js/bootstrap.js/bootstrap.min.js')
+        .pipe(gulp.dest('dist/js/'))
 })
 
 gulp.task('watch', () => {
@@ -49,6 +54,7 @@ gulp.task('server', () => {
 gulp.task('start', [
     'html',
     'styles',
+    'js',
     'assets',
     'server',
     'watch'
