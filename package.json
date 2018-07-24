@@ -5,17 +5,15 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "concurrently \"npm run sass\" \"npm run watch\"",
-    "presass": "cp ./src/index.html ./build/",
-    "sass": "node-sass -w src/main.scss build/css/main.css",
-    "watch": "copy-and-watch --watch src/**/*.{html}  build/"
+    "start": "./node_modules/.bin/gulp start"
   },
   "author": "Esteban Aleman",
   "license": "ISC",
   "devDependencies": {
-    "concurrently": "^3.6.1",
-    "copy-and-watch": "^0.1.2",
-    "node-sass": "^4.9.2"
+    "gulp": "^3.9.1",
+    "gulp-sass": "^4.0.1",
+    "gulp-util": "^3.0.8",
+    "gulp-webserver": "^0.9.1"
   },
   "dependencies": {
     "bootstrap": "^4.1.2",
