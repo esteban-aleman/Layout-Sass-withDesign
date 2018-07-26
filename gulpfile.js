@@ -1,9 +1,10 @@
 /* Gulpfile.js */
-let gulp = require('gulp')
-let gutil =  require('gulp-util')
-let sass = require('gulp-sass')
-let webserver = require('gulp-webserver');
-let path = require('path')
+const gulp = require('gulp')
+const gutil =  require('gulp-util')
+const sass = require('gulp-sass')
+const webserver = require('gulp-webserver');
+const path = require('path')
+const gulpStylelint = require('gulp-stylelint');
 
 /* tasks */
 // gulp.task(
@@ -12,8 +13,7 @@ let path = require('path')
 //   cb : fn
 // )
 
-/* Styles task */
-gulp.task('styles', () => {
+gulp.task('styles',['lint'], () => {
     return gulp.src('src/scss/main.scss')
         .pipe(sass({includePaths: [
                 path.join(__dirname, 'node_modules/bootstrap/scss/'),
@@ -22,8 +22,22 @@ gulp.task('styles', () => {
         .pipe(gulp.dest('dist/css/'))
 })
 
-gulp.task('html', () => {
+gulp.task('lint', () => {
+    return gulp.src('src/scss/**/*.scss')
+        .pipe(gulpStylelint({
+            reporters: [
+                {formatter: 'string', console: true}
+            ]
+        }));
+});
+
+gulp.task('html',['basics','assets'], () => {
     return gulp.src('src/**/*.html')
+        .pipe(gulp.dest('dist/'))
+})
+
+gulp.task('basics', () => {
+    return gulp.src(['src/favicon.ico','src/.htaccess'])
         .pipe(gulp.dest('dist/'))
 })
 
@@ -33,14 +47,15 @@ gulp.task('assets', () => {
 })
 
 gulp.task('js', () => {
-    return gulp.src('node_modules/bootstrap/dist/js/bootstrap.js/bootstrap.min.js')
+    return gulp.src(['node_modules/bootstrap/dist/js/bootstrap.js','src/js/**/*.js'])
         .pipe(gulp.dest('dist/js/'))
 })
 
 gulp.task('watch', () => {
-    gulp.watch('src/scss/**/*.scss', ['styles'],cb => cb)
+    gulp.watch('src/scss/**/*.scss', ['lint','styles'],cb => cb)
+    gulp.watch('src/js/**/*.js', ['js'],cb => cb)
     gulp.watch('src/**/*.html', ['html'],cb => cb)
-    gulp.watch('src/**/*.png', ['assets'],cb => cb)
+    gulp.watch('src/img/**/*.png', ['assets'],cb => cb)
 })
 
 gulp.task('server', () => {
@@ -55,7 +70,6 @@ gulp.task('start', [
     'html',
     'styles',
     'js',
-    'assets',
     'server',
     'watch'
 ], cb => cb)

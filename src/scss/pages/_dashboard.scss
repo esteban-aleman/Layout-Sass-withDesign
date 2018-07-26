@@ -1,0 +1,73 @@
+body {
+  background-color: $background-blue;
+}
+
+main {
+  padding: 2.5rem 5%;
+}
+
+.text--grey {
+  color: $mid-grey;
+}
+
+.text--dark-grey {
+  color: $dark-grey;
+}
+
+.text--blue {
+  color: $light-blue;
+}
+
+.text--strong {
+  font-weight: 700;
+}
+
+.text--small {
+  font-size: 0.8rem;
+}
+
+.border-bottom--grey {
+  border-bottom: solid 1px $light-grey;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.post__types {
+  border-radius: 3px;
+  padding: 25px 10px 5px 10px;
+}
+
+.post__types__icon {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.post__top {
+  border-radius: 3px 3px 0 0;
+  padding: 25px 20px 5px 20px;
+}
+
+.post__top__follow {
+  background-color: transparent;
+  margin-left: 5%;
+  margin-bottom: 1rem;
+}
+
+.post__tags {
+  padding: 30px 20px 15px 20px;
+}
+
+.post__bottom {
+  border-radius: 0 0 3px 3px;
+  padding: 15px 20px 10px 20px;
+}
+
+.side__row {
+  padding: 20px;
+}
+
+.side__row-sm {
+  padding: 5px 20px;
+}

@@ -1,0 +1,42 @@
+.navbar {
+  height: 4.4rem;
+  padding: 0;
+  background-color: $nav-blue;
+}
+
+.navbar-collapse {
+  z-index: 1;
+  background-color: $nav-blue;
+}
+
+.navbar-brand {
+  margin: 0 3rem;
+}
+
+.nav-item {
+  margin: 0 0.5rem;
+}
+
+.nav__search {
+  min-width: 21rem;
+  height: 2.1rem;
+  padding-left: 3rem;
+  background-color: $search-blue;
+  background-image: url(../assets/img/searchIcon.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: 5% center;
+}
+
+.nav__item__pen {
+  width: 2rem;
+  height: 2rem;
+  margin-top: 0.25rem;
+  margin-right: 3rem;
+  background-color: $light-blue;
+  background-image: url(../assets/img/pen.png);
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-position: center;
+  border-radius: 5px;
+}
