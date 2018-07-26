@@ -39,4 +39,8 @@
   background-size: auto;
   background-position: center;
   border-radius: 5px;
+
+  &:hover {
+    background-color: #fff;
+  }
 }
