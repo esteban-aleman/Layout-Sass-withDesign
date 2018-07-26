@@ -8,18 +8,12 @@ Nodejs
 
 ### Installing
 
--Run "npm install" in the root folder.
--Run "npm run start"
+*Run "npm install" in the root folder.
+*Run "npm run start"
 
 ## Deployment
 
 Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
 ## Contributing
 ## Versioning
@@ -32,6 +26,6 @@ Add additional notes about how to deploy this on a live system
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+This project is licensed under the ISC License
 
 
