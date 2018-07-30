@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="EN">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Tumblr</title>
+  <meta name="description" content="Layout practice with scss and a given design">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link href="https://fonts.googleapis.com/css?family=Raleway,300,700" rel="stylesheet">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="bg--blue">
+  <header>
+    <section class="main-navigation container-fluid">
+      <div class="container px-0">
+        <nav class="navbar navbar-expand-lg navbar-dark b-color-dark mx-lg-0 px-lg-0">
+          <a class="navbar-brand" href="index.html"><i class="fa fa-tumblr fa-2x"></i></a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarC" aria-controls="navbarC" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse ml-lg-5" id="navbarC">
+            <form class="form-inline my-2 my-lg-0 ml-lg-0 mr-auto">
+              <div>
+                <input class="main-navigation__search form-control mx-auto mx-lg-0 border-0" type="text" placeholder="Search Tumblr">
+                <i class="fa fa-search main-navigation__search__icon"></i>
+              </div>
+            </form>
+            <ul class="navbar-nav mx-0">
+              <li class="main-navigation-item active my-1 ml-3 my-lg-0 ml-lg-0"><a class="nav-link mt-1" href="#"><i class="fa fa-lg fa-home"></i><p class="ml-4 d-inline-block d-lg-none">Home</p></a></li>
+              <li class="main-navigation-item my-1 ml-3 my-lg-0 ml-lg-0"><a class="nav-link mt-1" href="#"><i class="fa fa-lg fa-compass"></i><p class="ml-4 d-inline-block d-lg-none">Location</p></a></li>
+              <li class="main-navigation-item my-1 ml-3 my-lg-0 ml-lg-0"><a class="nav-link mt-1" href="#"><i class="fa fa-lg fa-envelope"></i><p class="ml-4 d-inline-block d-lg-none">Mail</p></a></li>
+              <li class="main-navigation-item my-1 ml-3 my-lg-0 ml-lg-0"><a class="nav-link mt-1" href="#"><i class="fa fa-lg fa-comment"></i><p class="ml-4 d-inline-block d-lg-none">Chat</p></a></li>
+              <li class="main-navigation-item my-1 ml-3 my-lg-0 ml-lg-0"><a class="nav-link mt-1" href="#"><i class="fa fa-lg fa-bolt"></i><p class="ml-4 d-inline-block d-lg-none">Trending</p></a></li>
+              <li class="main-navigation-item my-1 ml-3 my-lg-0 ml-lg-0"><a class="nav-link mt-1" href="#"><i class="fa fa-lg fa-user"></i><p class="ml-4 d-inline-block d-lg-none">Profile</p></a></li>
+              <li class="main-navigation-item my-1 ml-2 my-lg-0 mx-lg-0"><a class="nav-link pr-lg-0" href="#"><i class="fa fa-pencil main-navigation-item__pen rounded"></i></a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </section>
+  </header>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
+  <main>
+    <div class="main__dashboard container-fluid">
+      <div class="container">
+        <div class="row">
+          <!--Wall-->
+          <div class="col-12 offset-0 col-lg-7 offset-lg-1">
+            <!--New post-->
+            <section class="new-post row">
+              <div class="new-post__avatar d-none d-lg-block col-1">
+                <img src="assets/img/pPhotoRetroGirl.png">
+              </div>
+              <nav class="new__post__options col-12 offset-0 col-lg-10 offset-lg-1 bg-white mb-30">
+                <ul class="list-unstyled d-flex justify-content-around m-0">
+                  <li><a href="#" class="text--decor-none"><i class="sprite sprite--sm sprite__text mx-auto"></i><p>Text</p></a></li>
+                  <li><a href="#" class="text--decor-none" data-toggle="modal" data-target="#photoModal"><i class="sprite sprite--sm sprite__photo mx-auto"></i><p>Photo</p></a></li>
+                  <li><a href="#" class="text--decor-none"><i class="sprite sprite--sm sprite__quote mx-auto"></i><p>Quote</p></a></li>
+                  <li><a href="#" class="text--decor-none"><i class="sprite sprite--sm sprite__link mx-auto"></i><p>Link</p></a></li>
+                  <li><a href="#" class="text--decor-none"><i class="sprite sprite--sm sprite__chat mx-auto"></i><p>Chat</p></a></li>
+                  <li><a href="#" class="text--decor-none"><i class="sprite sprite--sm sprite__audio mx-auto"></i><p>Audio</p></a></li>
+                  <li><a href="#" class="text--decor-none"><i class="sprite sprite--sm sprite__video mx-auto"></i><p>Video</p></a></li>
+                </ul>
+              </nav>
+            </section>
+            <!--Friends posts-->
+            <section class="posts">
+
+              <section class="posts__unit row">
+
+                <div class="posts__unit__avatar d-none d-lg-block col-lg-1">
+                  <img src="assets/img/pPhotoGuy.png">
+                </div>
+
+                <article class="posts__unit__content col-12 offset-0 col-lg-10 offset-lg-1 mb-30">
+                  <section class="post__unit__content__header row bg-white">
+                    <div class="col-9 col-lg-8">
+                      <div class="d-flex">
+                        <p class="text--grey">Here's a blog:</p><p class="text--grey text--strong">bob-strauss</p><button class="border-0 post__top__btn text--blue">Follow</button>
+                      </div>
+                    </div>
+                    <div class="col-3 offset-0 col-lg-2 offset-lg-2">
+                      <div class="d-flex justify-content-between">
+                        <i class="fa fa-times fa-lg mt-1 text--grey"></i>
+                        <i class="fa fa-compass fa-lg mt-1 text--grey"></i>
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="post__unit__content__body row">
+                    <div class="col-12 p-0">
+                      <img class="w-100" src="assets/img/mainPhoto.png">
+                    </div>
+                  </section>
+
+                  <section class="post__unit__content__footer row bg-white">
+                    <div class="post__tags col-12">
+                      <a href="#" class="hashtag text--grey">#forest</a>
+                      <a href="#" class="hashtag text--grey">#nature</a>
+                      <a href="#" class="hashtag text--grey">#darkness</a>
+                      <a href="#" class="hashtag text--grey">#blackforest</a>
+                    </div>
+                    <div class="col-md-8"><p class="text--grey text--strong">234,450 notes</p></div>
+                    <div class="col-md-4">
+                      <ul class="post__footer__options list-unstyled d-flex justify-content-between">
+                        <li><a href="#"><i class="fa fa-arrow-right fa-lg mt-1 text--grey"></i></a></li>
+                        <li><a href="#"><i class="fa fa-comment fa-lg mt-1 text--grey"></i></a></li>
+                        <li><a href="#"><i class="fa fa-recycle fa-lg mt-1 text--grey"></i></a></li>
+                        <li><a href="#"><i class="fa fa-heart fa-lg mt-1 text--grey"></i></a></li>
+                      </ul>
+                    </div>
+                  </section>
+                </article>
+              </section>
+            </section>
+          </div>
+
+          <!--Side Content-->
+          <aside class="col-xs-12 offset-xs-0 col-lg-3 offset-lg-1">
+            <section class="recommended-blogs row mb-30">
+              <div class="col">
+                <section class="recommended-blogs__header row side__row bg-white">
+                  <div class="col12"><p class="recommended-blogs__title mb-0 text--grey text--strong">RECOMMENDED BLOGS</p></div>
+                </section>
+
+                <section class="recommended-blogs__body">
+                  <div class="blog__card row side__row bg-white border-bottom--grey">
+                    <div class="col-12">
+                      <div class="d-flex">
+                        <div class="blog__picture align-self-center"><img src="assets/img/pPhotoR1.png"></div>
+                        <div class="align-self-center">
+                          <p class="blog__username my-0 ml-3 text--dark-grey text--strong">username</p>
+                          <p class="blog__name my-0 ml-3 text--grey text--small">Tumblr blog name</p></div>
+                        <div class="blog__add align-self-center ml-auto"><i class="fa fa-plus-square fa-lg mt-1 text--grey"></i></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="blog__card row side__row bg-white border-bottom--grey">
+                    <div class="col-12">
+                      <div class="d-flex">
+                        <div class="blog__picture align-self-center"><img src="assets/img/pPhotoR2.png"></div>
+                        <div class="align-self-center">
+                          <p class="blog__username my-0 ml-3 text--dark-grey text--strong">username</p>
+                          <p class="blog__name my-0 ml-3 text--grey text--small">Tumblr blog name</p></div>
+                        <div class="blog__add align-self-center ml-auto"><i class="fa fa-plus-square fa-lg mt-1 text--grey"></i></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="blog__card row side__row bg-white border-bottom--grey">
+                    <div class="col-12">
+                      <div class="d-flex">
+                        <div class="blog__picture align-self-center"><img src="assets/img/pPhotoR3.png"></div>
+                        <div class="align-self-center">
+                          <p class="blog__username my-0 ml-3 text--dark-grey text--strong">username</p>
+                          <p class="blog__name my-0 ml-3 text--grey text--small">Tumblr blog name</p></div>
+                        <div class="blog__add align-self-center ml-auto"><i class="fa fa-plus-square fa-lg mt-1 text--grey"></i></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="blog__card row side__row bg-white border-bottom--grey">
+                    <div class="col-12">
+                      <div class="d-flex">
+                        <div class="blog__picture align-self-center"><img src="assets/img/pPhotoR4.png"></div>
+                        <div class="align-self-center">
+                          <p class="blog__username my-0 ml-3  text--dark-grey text--strong">username</p>
+                          <p class="blog__name my-0 ml-3  text--grey text--small">Tumblr blog name</p></div>
+                        <div class="blog__add align-self-center ml-auto"><i class="fa fa-plus-square fa-lg mt-1 text--grey"></i></div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+
+                <section class="recommended-blogs__footer row side__row bg-white">
+                  <div class="col-12 footer__explore"><a href="#" class="text--blue text--strong">EXPLORE TUMBLR</a></div>
+                </section>
+              </div>
+            </section>
+
+            <section class="radar row">
+              <div class="col">
+                <div class="radar__header row side__row bg-white">
+                  <div class="col"><p class="radar__title mb-0 text--grey text--strong">RADAR</p></div>
+                </div>
+                <div class="radar__body">
+                  <div class="blog__card row side__row bg-white">
+                    <div class="col-12">
+                      <div class="d-flex">
+                        <div class="blog__picture align-self-center"><img src="assets/img/pPhotoRadarGirl.png"></div>
+                        <div class="align-self-center">
+                          <p class="blog__username my-0 ml-3 text--dark-grey text--strong">username</p>
+                          <p class="blog__name my-0 ml-3 text--grey text--small">Tumblr blog name</p></div>
+                        <div class="blog__add align-self-center ml-auto"><i class="fa fa-plus-square fa-lg mt-1 text--grey"></i></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="radar__blog__photo row side__row-sm bg-white">
+                    <div class="col-12">
+                      <div><img class="w-100" src="assets/img/radarPhoto.png"></div>
+                    </div>
+                  </div>
+                  <div class="radar__blog__photo-info row side__row-sm bg-white">
+                    <div class="col-8"><p class="text--grey">1,320 notes</p></div>
+                    <div class="radar__blog__photo-options col-3 offset-1 col-lg-4 offset-lg-0 d-flex justify-content-between">
+                      <div><i class="fa fa-recycle text--grey"></i></div>
+                      <div><i class="fa fa-heart text--grey"></i></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </main>
+  <footer>
+  </footer>
+
+  <!-- Modals -->
+  <div class="modal__photo modal m-0 p-0" id="photoModal" tabindex="-1" role="dialog" aria-labelledby="photoModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content border-0 rounded-0">
+        <div class="modal-header p-4 border-0">
+          <div class="modal-header__user-options dropdown">
+            <button class="btn text--strong text--dark-grey border-0 bg-transparent" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              mikemike
+              <i class="fa fa-chevron-down"></i>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">krlakrla</a>
+              <a class="dropdown-item" href="#">benben</a>
+              <a class="dropdown-item" href="#">sussus</a>
+            </div>
+          </div>
+          <button type="button" class="modal-header__settings btn bg-transparent border-0"><i class="fa fa-gear fa-lg"></i></button>
+        </div>
+        <section class="moda-body p-0">
+          <div class="modal-body__drag-drop w-100 d-flex">
+            <button class="modal-body__btn-photo btn--division bg-transparent w-50 text--grey"><i class="sprite sprite--md sprite__up-pic mx-auto mb-3"></i>Upload photos</button>
+            <button class="modal-body__btn-photo bg-transparent w-50 text--grey"><i class="sprite sprite--md sprite__up-web mx-auto mb-3"></i>Upload photos</button>
+          </div>
+        </section>
+        <section class="modal-footer d-flex p-4 border-0">
+          <button type="button" class="modal-footer__close btn text--strong text--dark-grey border-0 bg-transparent" data-dismiss="modal">Close</button>
+          <button type="button" class="modal-footer__tweet btn border-0 bg-transparent ml-auto"><i class="fa fa-twitter fa-lg"></i></button>
+          <div class="modal-footer__post-action dropdown">
+            <button class="btn text--white text--small border-0 bg--light-blue py-2 px-4" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              POST
+              <i class="fa fa-chevron-down pl-2"></i>
+            </button>
+            <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="#">SHARE</a>
+              <a class="dropdown-item" href="#">SAVE</a>
+              <a class="dropdown-item" href="#">PIN</a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script src="js/bootstrap.bundle.js"></script>
+
+</body>
+</html>

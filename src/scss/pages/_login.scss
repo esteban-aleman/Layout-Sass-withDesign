@@ -1,0 +1,49 @@
+.login--bg {
+  background-image: url(../assets/img/login_background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.login__title {
+  background-image: url(../assets/img/tumblr-logo.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 58px;
+  width: 280px;
+
+  @media (max-height: 568px) {
+    margin-bottom: 30px;
+  }
+}
+
+.login__btn {
+  background-color: $light-orange;
+  height: 60px;
+
+  @media (max-height: 568px) {
+    margin-bottom: 1rem;
+    height: auto;
+  }
+}
+
+.login__email {
+  height: 60px;
+
+  @media (max-height: 568px) {
+    height: 48px;
+  }
+}
+
+.form-signin {
+  display: block;
+  width: 100%;
+}
+
+.related-pages {
+  padding-bottom: 4rem;
+
+  @media (max-height: 568px) {
+    padding-bottom: 1rem;
+  }
+}

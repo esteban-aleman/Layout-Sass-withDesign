@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <title>Tumblr</title>
+  <title>Tumblr | Login</title>
   <meta name="description" content="Layout practice with scss and a given design">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="icon" href="favicon.ico" type="image/x-icon">
@@ -14,191 +14,48 @@
 </head>
 
 <body>
-  <header class=".container-fluid">
-    <nav class="navbar navbar-expand-lg navbar-dark b-color-dark">
-      <a class="navbar-brand" href="#"><img src="assets/img/tumblrIcon.png"></a>
-      <button class="navbar-toggler mr-5" type="button" data-toggle="collapse" data-target="#navbarC" aria-controls="navbarC" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarC">
-        <form class="form-inline my-2  my-lg-0 ml-lg-0 mr-auto">
-          <input class="form-control mx-auto mx-lg-0 nav__search border-0" type="text" placeholder="Search Tumblr">
-        </form>
-        <ul class="navbar-nav mx-0">
-          <li class="nav-item my-1 ml-3 my-lg-0 ml-lg-0"><a class="nav-link" href="#"><img src="assets/img/houseOn.png"><p class="ml-4 d-inline-block d-lg-none">Home</p></a></li>
-          <li class="nav-item my-1 ml-3 my-lg-0 ml-lg-0"><a class="nav-link" href="#"><img src="assets/img/locOff.png"><p class="ml-4 d-inline-block d-lg-none">Location</p></a></li>
-          <li class="nav-item my-1 ml-3 my-lg-0 ml-lg-0"><a class="nav-link" href="#"><img src="assets/img/mailOff.png"><p class="ml-4 d-inline-block d-lg-none">Mail</p></a></li>
-          <li class="nav-item my-1 ml-3 my-lg-0 ml-lg-0"><a class="nav-link" href="#"><img src="assets/img/chatOff.png"><p class="ml-4 d-inline-block d-lg-none">Chat</p></a></li>
-          <li class="nav-item my-1 ml-3 my-lg-0 ml-lg-0"><a class="nav-link" href="#"><img src="assets/img/boltOff.png"><p class="ml-4 d-inline-block d-lg-none">Trending</p></a></li>
-          <li class="nav-item my-1 ml-3 my-lg-0 ml-lg-0"><a class="nav-link" href="#"><img src="assets/img/personOff.png"><p class="ml-4 d-inline-block d-lg-none">Profile</p></a></li>
-          <li class="nav-item my-1 ml-2 my-lg-0 ml-lg-0"><a class="nav-link nav__item__pen" href="#"></a></li>
-        </ul>
-      </div>
-    </nav>
+<div class="login--bg">
+  <header>
   </header>
   <!--[if lte IE 9]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-    <![endif]-->
+  <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
   <main>
-    <div class="container-fluid">
+    <div class="container">
       <div class="row">
-        <!--Wall-->
-        <div class="col-12 col-lg-8">
-          <section class="row">
-            <div class="d-none d-lg-block col-md-1">
-              <img src="assets/img/pPhotoRetroGirl.png">
-            </div>
-            <section class="col-12 offset-0 col-lg-10 offset-lg-1 post__types bg-white mb-30">
-              <div class="d-flex justify-content-around">
-                <div><img class="post__types__icon mx-auto" src="assets/img/text.png"><p class="description">Text</p></div>
-                <div><img class="post__types__icon mx-auto" src="assets/img/photo.png"><p class="description">Photo</p></div>
-                <div><img class="post__types__icon mx-auto" src="assets/img/quote.png"><p class="description">Quote</p></div>
-                <div><img class="post__types__icon mx-auto" src="assets/img/link.png"><p class="description">Link</p></div>
-                <div><img class="post__types__icon mx-auto" src="assets/img/chat.png"><p class="description">Chat</p></div>
-                <div><img class="post__types__icon mx-auto" src="assets/img/audio.png"><p class="description">Audio</p></div>
-                <div><img class="post__types__icon mx-auto" src="assets/img/video.png"><p class="description">Video</p></div>
-              </div>
+        <div class="col-12 offset-0 col-xs-8 offset-xs-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+          <div class="h--100vh d-flex flex-column justify-content-center align-items-center">
+            <i class="login__title mb-100 d-block mx-auto"></i>
+            <section class="login__content text-center min-width--100">
+              <form action="dashboard.html" class="form-signin">
+                <input type="email" id="inputEmail" class="login__email mb-4 form-control" placeholder="Email" required autofocus>
+                <button class="login__btn text--white text--strong  mb-60 btn btn-lg btn-block" type="submit">Next</button>
+                <a href="#" class="text--decor-none"><p class="text--white text--strong">Sign up</p></a>
+              </form>
             </section>
-          </section>
-          <section class="row">
-            <div class="d-none d-lg-block col-lg-1">
-              <img src="assets/img/pPhotoGuy.png">
-            </div>
-            <article class="col-12 offset-0 col-lg-10 offset-lg-1 mb-30">
-              <div class="row post__top bg-white">
-                <div class="col-9 col-lg-8">
-                  <div class="d-flex">
-                    <p class="text--grey">Here's a blog:</p><p class="text--grey text--strong">bob-strauss</p><button class="border-0 post__top__btn text--blue">Follow</button>
-                  </div>
-                </div>
-                <div class="col-3 offset-0 col-lg-2 offset-lg-2">
-                  <div class="d-flex justify-content-between">
-                    <img src="assets/img/xClose.png">
-                    <img src="assets/img/greyLoc.png">
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-12 p-0">
-                  <img class="w-100" src="assets/img/mainPhoto.png">
-                </div>
-              </div>
-              <div class="row post__tags bg-white">
-                <div class="col-12">
-                  <a href="#" class="hashtag text--grey">#forest</a>
-                  <a href="#" class="hashtag text--grey">#nature</a>
-                  <a href="#" class="hashtag text--grey">#darkness</a>
-                  <a href="#" class="hashtag text--grey">#blackforest</a>
-                </div>
-              </div>
-              <div class="row post__bottom bg-white">
-                <div class="col-md-8"><p class="text--grey text--strong">234,450 notes</p></div>
-                <div class="col-md-4">
-                  <div class="d-flex justify-content-between">
-                    <img src="assets/img/sideArrow.png">
-                    <img src="assets/img/greyChat.png">
-                    <img src="assets/img/turn.png">
-                    <img src="assets/img/heart.png">
-                  </div>
-                </div>
-              </div>
-            </article>
-          </section>
-        </div>
-        <!--Side Content-->
-        <div class="col-xs-12 offset-xs-0 col-lg-3 offset-lg-1">
-          <aside class="row mb-30">
-            <div class="col">
-              <div class="row side__row bg-white">
-                <div class="col12"><p class="mb-0 text--grey text--strong">RECOMMENDED BLOGS</p></div>
-              </div>
-              <div class="row side__row bg-white border-bottom--grey">
-                <div class="col-12">
-                  <div class="d-flex">
-                    <div class="align-self-center"><img src="assets/img/pPhotoR1.png"></div>
-                    <div class="align-self-center">
-                      <p class="my-0 ml-3 text--dark-grey text--strong">username</p>
-                      <p class="my-0 ml-3 text--grey text--small">Tumblr blog name</p></div>
-                    <div class="align-self-center ml-auto"><img src="assets/img/plusBox.png"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="row side__row bg-white border-bottom--grey">
-                <div class="col-12">
-                  <div class="d-flex">
-                    <div class="align-self-center"><img src="assets/img/pPhotoR2.png"></div>
-                    <div class="align-self-center">
-                      <p class="my-0 ml-3 text--dark-grey text--strong">username</p>
-                      <p class="my-0 ml-3 text--grey text--small">Tumblr blog name</p></div>
-                    <div class="align-self-center ml-auto"><img src="assets/img/plusBox.png"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="row side__row bg-white border-bottom--grey">
-                <div class="col-12">
-                  <div class="d-flex">
-                    <div class="align-self-center"><img src="assets/img/pPhotoR3.png"></div>
-                    <div class="align-self-center">
-                      <p class="my-0 ml-3 text--dark-grey text--strong">username</p>
-                      <p class="my-0 ml-3 text--grey text--small">Tumblr blog name</p></div>
-                    <div class="align-self-center ml-auto"><img src="assets/img/plusBox.png"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="row side__row bg-white border-bottom--grey">
-                <div class="col-12">
-                  <div class="d-flex">
-                    <div class="align-self-center"><img src="assets/img/pPhotoR4.png"></div>
-                    <div class="align-self-center">
-                      <p class="my-0 ml-3  text--dark-grey text--strong">username</p>
-                      <p class="my-0 ml-3  text--grey text--small">Tumblr blog name</p></div>
-                    <div class="align-self-center ml-auto"><img src="assets/img/plusBox.png"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="row side__row bg-white">
-                <div class="col-12"><a href="#" class="text--blue text--strong">EXPLORE TUMBLR</a></div>
-              </div>
-            </div>
-          </aside>
-          <aside class="row">
-            <div class="col">
-              <div class="row side__row bg-white">
-                <div class="col"><p class="mb-0 text--grey text--strong">RADAR</p></div>
-              </div>
-              <div class="row side__row bg-white">
-                <div class="col-12">
-                  <div class="d-flex">
-                    <div class="align-self-center"><img src="assets/img/pPhotoRadarGirl.png"></div>
-                    <div class="align-self-center">
-                      <p class="my-0 ml-3 text--dark-grey text--strong">username</p>
-                      <p class="my-0 ml-3 text--grey text--small">Tumblr blog name</p></div>
-                    <div class="align-self-center ml-auto"><img src="assets/img/plusBox.png"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="row side__row-sm bg-white">
-                <div class="col-12">
-                  <div><img class="w-100" src="assets/img/radarPhoto.png"></div>
-                </div>
-              </div>
-              <div class="row side__row-sm bg-white">
-                <div class="col-8"><p class="text--grey">1,320 notes</p></div>
-                <div class="col-3 offset-1 col-lg-4 offset-lg-0 d-flex justify-content-between">
-                  <div><img src="assets/img/turn.png"></div>
-                  <div><img src="assets/img/heart.png"></div>
-                </div>
-              </div>
-            </div>
-          </aside>
+          </div>
         </div>
       </div>
     </div>
   </main>
-  <footer>
+
+  <footer class="fixed-bottom">
+    <div class="related-pages container">
+      <div class="col-12 offset-0 col-xs-8 offset-xs-2 col-lg-4 offset-lg-4">
+        <nav>
+          <ul class="list-unstyled d-flex justify-content-around m-0">
+            <li><a class="text--decor-none" href="#"><p class="text--grey">Terms</p></a></li>
+            <li><a class="text--decor-none" href="#"><p class="text--grey">Privacy</p></a></li>
+            <li><a class="text--decor-none" href="#"><p class="text--grey">Jobs</p></a></li>
+            <li><a class="text--decor-none" href="#"><p class="text--grey">Support</p></a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </footer>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
-  <script src="js/bootstrap.js"></script>
+</div>
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+<script src="js/bootstrap.js"></script>
 </body>
 </html>

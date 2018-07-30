@@ -1,8 +1,12 @@
-//Helpers
-@import "helpers/variables";
 //Vendor
 @import "vendor/bootstrap-custom";
+@import "font-awesome";
+//Helpers
+@import "helpers/variables";
+@import "helpers/mixins";
+@import "helpers/basics";
 //Components
 @import "components/navbar";
 //Pages
+@import "pages/login";
 @import "pages/dashboard";

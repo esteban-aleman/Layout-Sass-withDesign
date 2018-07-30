@@ -1,0 +1,81 @@
+.text--grey {
+  color: $mid-grey;
+}
+
+.text--dark-grey {
+  color: $dark-grey;
+}
+
+.text--blue {
+  color: $light-blue;
+}
+
+.text--white {
+  color: #fff;
+}
+
+.text--strong {
+  font-weight: 700;
+}
+
+.text--small {
+  font-size: 0.8rem;
+}
+
+.text--decor-none {
+  color: inherit;
+  text-decoration: none;
+  text-underline: none;
+
+  &:hover {
+    text-decoration: none;
+    text-underline: none;
+  }
+}
+
+.bg--blue {
+  background-color: $background-blue;
+}
+
+.bg--light-blue {
+  background-color: $light-blue;
+}
+
+.mb-30 {
+  margin-bottom: 30px;
+}
+
+.mb-60 {
+  margin-bottom: 60px;
+}
+
+.mb-100 {
+  margin-bottom: 100px;
+}
+
+.h-60 {
+  height: 60px;
+}
+
+.h--100vh {
+  height: 100vh;
+}
+
+.min-width--100 {
+  min-width: 100%;
+}
+
+.sprite {
+  display: block;
+  background-image: url(../assets/img/sprite.png);
+}
+
+.sprite--sm {
+  width: $sprite-sm;
+  height: $sprite-sm;
+}
+
+.sprite--md {
+  width: $sprite-md;
+  height: $sprite-md;
+}

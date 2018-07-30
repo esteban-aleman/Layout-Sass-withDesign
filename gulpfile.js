@@ -13,13 +13,19 @@ const gulpStylelint = require('gulp-stylelint');
 //   cb : fn
 // )
 
-gulp.task('styles',['lint'], () => {
+gulp.task('styles', () => {
     return gulp.src('src/scss/main.scss')
         .pipe(sass({includePaths: [
                 path.join(__dirname, 'node_modules/bootstrap/scss/'),
+                path.join(__dirname, 'node_modules/font-awesome/scss/'),
                 path.join(__dirname, 'src/scss')]
             , outputStyle: 'compressed'}))
         .pipe(gulp.dest('dist/css/'))
+})
+
+gulp.task('fonts', function() {
+    return gulp.src('node_modules/font-awesome/fonts/*')
+        .pipe(gulp.dest('dist/fonts'))
 })
 
 gulp.task('lint', () => {
@@ -42,12 +48,12 @@ gulp.task('basics', () => {
 })
 
 gulp.task('assets', () => {
-    return gulp.src('src/**/*.png')
+    return gulp.src('src/**/*.{gif,jpg,png,svg}')
         .pipe(gulp.dest('dist/assets/'))
 })
 
 gulp.task('js', () => {
-    return gulp.src(['node_modules/bootstrap/dist/js/bootstrap.js','src/js/**/*.js'])
+    return gulp.src(['node_modules/bootstrap/dist/js/bootstrap.bundle.js','src/js/**/*.js'])
         .pipe(gulp.dest('dist/js/'))
 })
 
@@ -68,8 +74,17 @@ gulp.task('server', () => {
 
 gulp.task('start', [
     'html',
+    'fonts',
+    'lint',
     'styles',
     'js',
     'server',
     'watch'
+], cb => cb)
+
+gulp.task('deploy', [
+    'html',
+    'fonts',
+    'styles',
+    'js'
 ], cb => cb)

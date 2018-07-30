@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "./node_modules/.bin/gulp start"
+    "start": "./node_modules/.bin/gulp start",
+    "deploy": "./node_modules/.bin/gulp deploy"
   },
   "author": "Esteban Aleman",
   "license": "ISC",
@@ -18,6 +19,7 @@
     "stylelint": "^9.4.0"
   },
   "dependencies": {
-    "bootstrap": "^4.1.2"
+    "bootstrap": "^4.1.2",
+    "font-awesome": "^4.7.0"
   }
 }

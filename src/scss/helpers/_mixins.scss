@@ -1,0 +1,7 @@
+@mixin sprite-sm-pos ($number) {
+  background-position: -$number * ($sprite-sm + 1) -1px;
+}
+
+@mixin sprite-md-pos ($number) {
+  background-position: (-7*($sprite-sm+1))+1 + (-$number * ($sprite-md + 1)) -1px;
+}
