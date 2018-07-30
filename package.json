@@ -12,11 +12,15 @@
   "license": "ISC",
   "devDependencies": {
     "gulp": "^3.9.1",
+    "gulp-eslint": "^5.0.0",
     "gulp-sass": "^4.0.1",
     "gulp-stylelint": "^7.0.0",
+    "gulp-svg-sprite": "^1.4.0",
+    "gulp-uglify": "^3.0.1",
     "gulp-util": "^3.0.8",
     "gulp-webserver": "^0.9.1",
-    "stylelint": "^9.4.0"
+    "stylelint": "^9.4.0",
+    "uglify": "^0.1.5"
   },
   "dependencies": {
     "bootstrap": "^4.1.2",
