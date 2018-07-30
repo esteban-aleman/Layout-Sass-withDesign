@@ -49,7 +49,7 @@ gulp.task('basics', () => {
 
 gulp.task('assets', () => {
     return gulp.src('src/**/*.{gif,jpg,png,svg}')
-        .pipe(gulp.dest('dist/assets/'))
+        .pipe(gulp.dest('dist/'))
 })
 
 gulp.task('js', () => {
@@ -61,7 +61,6 @@ gulp.task('watch', () => {
     gulp.watch('src/scss/**/*.scss', ['lint','styles'],cb => cb)
     gulp.watch('src/js/**/*.js', ['js'],cb => cb)
     gulp.watch('src/**/*.html', ['html'],cb => cb)
-    gulp.watch('src/img/**/*.png', ['assets'],cb => cb)
 })
 
 gulp.task('server', () => {
