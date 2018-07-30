@@ -13,19 +13,19 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 
-<body>
-<div class="login--bg">
-  <header>
-  </header>
+<body class="login--bg">
   <!--[if lte IE 9]>
   <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
-  <main>
-    <div class="container">
-      <div class="row">
-        <div class="col-12 offset-0 col-xs-8 offset-xs-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
-          <div class="h--100vh d-flex flex-column justify-content-center align-items-center">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 offset-0 col-xs-8 offset-xs-2 col-md-6 offset-md-3 col-lg-4 offset-lg-4">
+        <div class="h--100vh d-flex flex-column justify-content-center align-items-center">
+          <header>
             <i class="login__title mb-100 d-block mx-auto"></i>
+          </header>
+
+          <main class="min-width--100">
             <section class="login__content text-center min-width--100">
               <form action="dashboard.html" class="form-signin">
                 <input type="email" id="inputEmail" class="login__email mb-4 form-control" placeholder="Email" required autofocus>
@@ -33,27 +33,28 @@
                 <a href="#" class="text--decor-none"><p class="text--white text--strong">Sign up</p></a>
               </form>
             </section>
-          </div>
+          </main>
+
+
+          <footer class="fixed-bottom">
+            <div class="related-pages container">
+              <div class="col-12 offset-0 col-xs-8 offset-xs-2 col-lg-4 offset-lg-4">
+                <nav>
+                  <ul class="list-unstyled d-flex justify-content-around m-0">
+                    <li><a class="text--decor-none" href="#"><p class="text--grey">Terms</p></a></li>
+                    <li><a class="text--decor-none" href="#"><p class="text--grey">Privacy</p></a></li>
+                    <li><a class="text--decor-none" href="#"><p class="text--grey">Jobs</p></a></li>
+                    <li><a class="text--decor-none" href="#"><p class="text--grey">Support</p></a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </footer>
+
         </div>
       </div>
     </div>
-  </main>
-
-  <footer class="fixed-bottom">
-    <div class="related-pages container">
-      <div class="col-12 offset-0 col-xs-8 offset-xs-2 col-lg-4 offset-lg-4">
-        <nav>
-          <ul class="list-unstyled d-flex justify-content-around m-0">
-            <li><a class="text--decor-none" href="#"><p class="text--grey">Terms</p></a></li>
-            <li><a class="text--decor-none" href="#"><p class="text--grey">Privacy</p></a></li>
-            <li><a class="text--decor-none" href="#"><p class="text--grey">Jobs</p></a></li>
-            <li><a class="text--decor-none" href="#"><p class="text--grey">Support</p></a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
-  </footer>
-</div>
+  </div>
 <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
 <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
 <script src="js/bootstrap.js"></script>

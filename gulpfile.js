@@ -23,7 +23,7 @@ gulp.task('styles', () => {
         .pipe(gulp.dest('dist/css/'))
 })
 
-gulp.task('fonts', function() {
+gulp.task('fonts', () => {
     return gulp.src('node_modules/font-awesome/fonts/*')
         .pipe(gulp.dest('dist/fonts'))
 })
