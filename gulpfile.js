@@ -5,6 +5,9 @@ const sass = require('gulp-sass')
 const webserver = require('gulp-webserver');
 const path = require('path')
 const gulpStylelint = require('gulp-stylelint');
+const eslint = require('gulp-eslint');
+var uglify = require('gulp-uglify');
+var pump = require('pump');
 
 /* tasks */
 // gulp.task(
@@ -52,14 +55,30 @@ gulp.task('assets', () => {
         .pipe(gulp.dest('dist/'))
 })
 
-gulp.task('js', () => {
-    return gulp.src(['node_modules/bootstrap/dist/js/bootstrap.bundle.js','src/js/**/*.js'])
-        .pipe(gulp.dest('dist/js/'))
-})
+gulp.task('js',['myjs','compress'], () => {
+  return gulp.src('node_modules/bootstrap/dist/js/bootstrap.bundle.js')
+        .pipe(gulp.dest('dist/js/'));
+});
+
+gulp.task('myjs', () => {
+    return gulp.src('src/js/*.js')
+        .pipe(eslint())
+        .pipe(eslint.format());
+});
+
+gulp.task('compress', function (cb) {
+    pump([
+            gulp.src('src/js/main.js'),
+            uglify(),
+            gulp.dest('dist/js')
+        ],
+        cb
+    );
+});
 
 gulp.task('watch', () => {
     gulp.watch('src/scss/**/*.scss', ['lint','styles'],cb => cb)
-    gulp.watch('src/js/**/*.js', ['js'],cb => cb)
+    gulp.watch('src/js/*.js', ['js'],cb => cb)
     gulp.watch('src/**/*.html', ['html'],cb => cb)
 })
 
