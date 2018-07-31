@@ -16,12 +16,16 @@ subm.addEventListener('click', function() {
 })
 
 logmail.addEventListener('focus',function() {
-  login.resetFail();
+  resetFail();
 });
 
 logpass.addEventListener('focus', function() {
-  login.resetFail();
+  resetFail();
 });
+
+var resetFail = function () {
+  failedmsj.style.display = 'none';
+}
 
 var login = (function validateCredentials() {
 
@@ -33,10 +37,6 @@ var login = (function validateCredentials() {
     return logpass.value === users[logmail.value];
   };
 
-  var resetFail = function () {
-    failedmsj.style.display = 'none';
-  }
-
   var validate = function () {
     if(_validMail() && _validPass()){
       window.location.href = 'dashboard.html';
@@ -46,8 +46,7 @@ var login = (function validateCredentials() {
   };
 
   return {
-    validate: validate,
-    resetFail: resetFail
+    validate: validate
   };
 
 })();
